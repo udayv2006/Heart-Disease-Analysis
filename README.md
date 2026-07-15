@@ -28,6 +28,7 @@ This project focuses on analyzing heart disease data using **Tableau** to uncove
 ---
 
 ## 🛠️ Tools & Technologies
+- **MySQL** - for performing Sql Operations
 - **Tableau Online** – for dashboards and storytelling
 - **Data Analytics** – preprocessing and exploration
 - **GitHub** – version control and project sharing
