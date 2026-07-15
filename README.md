@@ -48,6 +48,4 @@ This project focuses on analyzing heart disease data using **Tableau** to uncove
 
 ---
 
-## 👩‍💻 Author
-Developed by **Uday V**  
-A Tableau-based data analytics project for healthcare insights.
+
