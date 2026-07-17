@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Welcome | Heart Disease Analysis{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a href="{{ url_for('home') }}" class="brand">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+        <line x1="4" y1="6" x2="16" y2="6"/>
+        <line x1="4" y1="12" x2="12" y2="12"/>
+        <line x1="4" y1="18" x2="14" y2="18"/>
+      </svg>
+      Welcome
+    </a>
+    <nav class="nav-links">
+      <a href="{{ url_for('home') }}" class="{{ 'active' if active == 'home' else '' }}">Home</a>
+      <a href="{{ url_for('about') }}" class="{{ 'active' if active == 'about' else '' }}">About</a>
+      <a href="{{ url_for('dashboard') }}" class="{{ 'active' if active == 'dashboard' else '' }}">Dashboard</a>
+      <a href="{{ url_for('story') }}" class="{{ 'active' if active == 'story' else '' }}">Story</a>
+      <a href="{{ url_for('contact') }}" class="{{ 'active' if active == 'contact' else '' }}">Contact</a>
+    </nav>
+    <a href="{{ url_for('contact') }}" class="btn-primary nav-cta">Get Started</a>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <p>Built with Flask &amp; Tableau &mdash; for healthcare professionals, policymakers, and individuals.</p>
+  </footer>
+</body>
+</html>

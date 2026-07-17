@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Contact | Heart Disease Analysis{% endblock %}
+
+{% block content %}
+<section class="contact">
+  <div class="contact-text">
+    <span class="eyebrow">Get in touch</span>
+    <h1>Questions about the data?</h1>
+    <p>Reach out if you'd like access to the underlying dataset, want to
+      collaborate on a new dashboard, or have feedback on the insights
+      presented here.</p>
+    <ul class="contact-list">
+      <li><strong>Email</strong> — insights@heartanalysis.org</li>
+      <li><strong>Response time</strong> — within 2 business days</li>
+    </ul>
+  </div>
+
+  <form class="contact-form" onsubmit="return false;">
+    <label for="name">Name</label>
+    <input id="name" type="text" placeholder="Jane Doe" />
+
+    <label for="email">Email</label>
+    <input id="email" type="email" placeholder="jane@example.com" />
+
+    <label for="message">Message</label>
+    <textarea id="message" rows="4" placeholder="How can we help?"></textarea>
+
+    <button type="submit" class="btn-primary">Send message</button>
+  </form>
+</section>
+{% endblock %}

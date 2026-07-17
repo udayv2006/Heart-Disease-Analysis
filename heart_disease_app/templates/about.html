@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block title %}About | Heart Disease Analysis{% endblock %}
+
+{% block content %}
+<section class="about">
+  <div class="about-text">
+    <span class="eyebrow">About the condition</span>
+    <p>Heart disease is a group of conditions affecting the cardiovascular
+      system, arising from damage to the epicardium, pericardium,
+      myocardium, endocardium, valves, or vessels of the heart.</p>
+    <p>According to the National Heart, Lung, and Blood Institute's
+      Framingham study, the most significant contributors to cardiovascular
+      disease are obesity, a sedentary lifestyle, and smoking &mdash; each of
+      which is explored in the dashboards linked below.</p>
+    <a href="{{ url_for('dashboard') }}" class="btn-primary">Explore the data &rarr;</a>
+  </div>
+
+  <div class="about-art" aria-hidden="true">
+    <svg width="100%" height="380" viewBox="0 0 420 380" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="420" height="380" rx="20" fill="#1E2A5E"/>
+      <circle cx="210" cy="190" r="110" fill="#26317A"/>
+      <circle cx="210" cy="190" r="80" fill="none" stroke="#4F46E5" stroke-width="1.5" stroke-dasharray="4 6"/>
+      <path d="M185 175
+               C 185 158, 205 148, 210 162
+               C 215 148, 235 158, 235 175
+               C 235 195, 210 218, 210 218
+               C 210 218, 185 195, 185 175 Z" fill="#E11D48"/>
+      <path d="M140 190 L170 190 L180 172 L198 210 L212 190 L280 190"
+            stroke="#EEF2FF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+      <g stroke="#8B93C9" stroke-width="1.5" opacity="0.6">
+        <line x1="210" y1="80" x2="210" y2="60"/>
+        <line x1="120" y1="190" x2="95" y2="190"/>
+        <line x1="300" y1="190" x2="325" y2="190"/>
+        <line x1="210" y1="300" x2="210" y2="320"/>
+      </g>
+      <circle cx="210" cy="55" r="6" fill="#4F46E5"/>
+      <circle cx="90" cy="190" r="6" fill="#4F46E5"/>
+      <circle cx="330" cy="190" r="6" fill="#4F46E5"/>
+      <circle cx="210" cy="325" r="6" fill="#4F46E5"/>
+    </svg>
+  </div>
+</section>
+
+<section class="factor-grid">
+  <div class="factor-card">
+    <h3>Obesity</h3>
+    <p>Excess body weight increases strain on the heart and raises blood pressure and cholesterol.</p>
+  </div>
+  <div class="factor-card">
+    <h3>Sedentary lifestyle</h3>
+    <p>Low physical activity is linked to weaker cardiovascular function over time.</p>
+  </div>
+  <div class="factor-card">
+    <h3>Smoking</h3>
+    <p>Tobacco use damages blood vessels and significantly raises cardiovascular risk.</p>
+  </div>
+</section>
+{% endblock %}

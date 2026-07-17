@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}{{ view.title }} | Heart Disease Analysis{% endblock %}
+
+{% block content %}
+<section class="viz-header">
+  <span class="eyebrow">{{ 'Live dashboard' if active == 'dashboard' else 'Data story' }}</span>
+  <h1>{{ view.title }}</h1>
+  <p>{{ view.description }}</p>
+</section>
+
+<section class="viz-container">
+  <tableau-viz
+    id="tableauViz"
+    src="{{ view.url }}"
+    toolbar="bottom"
+    hide-tabs
+    style="height: {{ view.height or '800px' }};"
+  ></tableau-viz>
+</section>
+{% endblock %}
